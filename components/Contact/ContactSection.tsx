@@ -12,7 +12,7 @@ export default function ContactSection() {
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
 
-  const whatsappNumber = "9050589956055"; // ضع رقم WhatsApp هنا
+  const whatsappNumber = "905058995605"; // ضع رقم WhatsApp هنا
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
