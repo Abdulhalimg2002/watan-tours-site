@@ -1,16 +1,3 @@
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata = {
   title: "وطن تورز - أفضل الجولات السياحية في تركيا",
   description:
@@ -18,6 +5,11 @@ export const metadata = {
   keywords: ["جولات سياحية", "إسطنبول", "توصيل للمطار", "رحلات تركيا", "وطن تورز"],
   authors: [{ name: "وطن تورز" }],
   robots: "index, follow",
+
+  // ✅ هذا السطر مهم للتحقق مع Google
+  verification: {
+    google: "UI078TID0yULvrupDKkXr56MNwldAiWyGHc1Cdy_O-I",
+  },
 
   openGraph: {
     title: "وطن تورز - أفضل الجولات السياحية في تركيا",
@@ -27,23 +19,10 @@ export const metadata = {
     siteName: "وطن تورز",
     images: [
       {
-        url: "/WhatsApp_Image_2026-03-25_at_23.26.46-removebg-preview.png",
+        url: "https://watan-tours.vercel.app/WhatsApp_Image_2026-03-25_at_23.26.46-removebg-preview.png",
       },
     ],
     locale: "ar_AR",
     type: "website",
   },
 };
-
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <html
-      lang="ar"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col bg-[#111111] text-white" dir="rtl">
-        {children}
-      </body>
-    </html>
-  );
-}
