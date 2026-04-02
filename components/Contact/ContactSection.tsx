@@ -82,7 +82,7 @@ export default function ContactSection() {
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   required
-                  className="w-full min-h-30 sm:min-h-35 rounded-xl border border-[#D4AF37] px-4 py-2 text-base sm:text-lg focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-[#D4AF37] resize-none"
+                  className="w-full min-h-30 sm:min-h-35 rounded-xl placeholder:text-white border border-[#D4AF37] px-4 py-2 text-base sm:text-lg focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-[#D4AF37] resize-none"
                 />
               </Field>
 
